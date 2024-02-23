@@ -56,7 +56,15 @@ for (let i = new Date(startDate.getTime()); i <= endDate; i.setDate(i.getDate() 
     dayElement.setAttribute("month", i.getMonth());
     dayElement.setAttribute("date", i.getDate());
     container.appendChild(dayElement);
+
     dayCount++;
+}
+
+for (let i of document.getElementsByClassName("day")) {
+    if (i.getAttribute("date") == today.getDate() && i.getAttribute("month") == today.getMonth()) {
+        i.scrollIntoView({behavior: 'smooth', block: 'center'});
+        break;
+    }
 }
 
 let lastDate = new Date();
@@ -113,3 +121,4 @@ fixsize();
 function setColor(color) {
     document.documentElement.style.setProperty("--accent-color", color);
 }
+
