@@ -1,0 +1,120 @@
+:root {
+    --background-color: white;
+    --text-color: white;
+    --accent-color: #1c71d8;
+    --alt-accent-color: #639fe8;
+    --faded-color: #5b5b5b;
+    --alt-faded-color: #777777;
+    --shadow-color: black;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+}
+
+#container {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transform-origin: top;
+    width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.day {
+    margin: 5px;
+    width: 50px;    
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.non-school {
+    --accent-color: var(--alt-accent-color);
+    --faded-color: var(--alt-faded-color);
+}
+
+.passed {
+    animation: pass 3s ease forwards, top 3s forwards;
+    
+}
+
+.passed.silent {
+    animation: none;
+    background-color: var(--faded-color);
+}
+
+.hidden {
+    background-color: transparent;
+}
+
+input[type=color] {
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+@keyframes pass {
+    20% {
+        transform: scale(2);
+        background-color: var(--accent-color);
+        box-shadow: var(--shadow-color) 0px 0px 10px;
+    }
+    35% {
+        transform: scale(2);
+        background-color: var(--accent-color);
+    }
+    50% {
+        transform: scale(2.2);
+        background-color: white;
+    }
+    65% {
+        transform: scale(2);
+        background-color: var(--faded-color);
+    }
+    80% {
+        transform: scale(2);
+        background-color: var(--faded-color);
+        box-shadow: var(--shadow-color) 0px 0px 10px;
+    }
+    100% {
+        transform: scale(1);
+        background-color: var(--faded-color);
+        box-shadow: var(--shadow-color) 0px 0px 0px;
+    }
+}
+
+@keyframes top {
+    0% {
+        position: relative;
+        z-index: 1;
+    }
+    100% {
+        position: relative;
+        z-index: 1;
+    }
+    100% {
+        position: initial;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #181a1b;
+        --accent-color: #165aad;
+        --alt-accent-color: #113764;
+        --faded-color: #454a4d;
+        --alt-faded-color: #242424;
+    }
+}
