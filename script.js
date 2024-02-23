@@ -1,23 +1,24 @@
-const startDate = new Date(2022, 7, 15);
-const endDate = new Date(2023, 5, 7);
+const startDate = new Date(2023, 7, 14);
+const endDate = new Date(2024, 5, 5);
 
 const breakDays = [
-    new Date(2022, 8, 5),
-    new Date(2022, 8, 16),
-    new Date(2022, 9, 13),
-    new Date(2022, 9, 14),
-    new Date(2022, 10, 11),
-    new Date(2022, 11, 16),
-    new Date(2023, 0, 16),
-    new Date(2023, 1, 3),
-    new Date(2023, 1, 20),
-    new Date(2023, 2, 17),
-    new Date(2023, 2, 31),
-    new Date(2023, 4, 5),
-    new Date(2023, 4, 29),
+    new Date(2023, 8, 4),
+    new Date(2023, 8, 15),
+    new Date(2023, 9, 13),
+    new Date(2023, 10, 9),
+    new Date(2023, 10, 10),
+    new Date(2023, 11, 22),
+
+    new Date(2024, 0, 15),
+    new Date(2024, 1, 9),
+    new Date(2024, 1, 19),
+    new Date(2024, 2, 15),
+    new Date(2024, 2, 29),
+    new Date(2024, 4, 3),
+    new Date(2024, 4, 27),
 ];
 
-const breakWeeks = [14, 18, 19, 20, 33];
+const breakWeeks = [14, 19, 20, 21, 33];
 
 let container = document.getElementById("container");
 
